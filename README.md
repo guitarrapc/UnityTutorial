@@ -103,15 +103,32 @@ Done
     - Create component, Script, to trace Player position
         - as FPS
         - as TPS
-- [ ] Prefab
+- [x] Prefab
     - [Tutorial 4](https://github.com/unity3d-jp/FirstTutorial/wiki/4.%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E5%9B%9E%E5%8F%8E%E3%81%AE%E8%BF%BD%E5%8A%A0)
-    - [ ] What Prefab is.
-        - 
-    - [ ] Why Prefab?
-        - 
-    - [ ] Why Prefab make it easy to dup GameObejcts?
-        - 
-    - [ ] Create Prefab
+    - [x] What Prefab is.
+        - [Unity - Prefab](http://docs.unity3d.com/ja/current/Manual/Prefabs.html)
+        - Instance of Asset?
+        - All GameObject created from Prefab can be handle as Class Instance.
+        - It means if you add some material to a Prefab, not to GameObject, then all clone items created from a Prefab will be apply same change.
+        - After you create instance of Prefab, you can set each instance of GameObject position, rotation and others.
+    - [x] Why Prefab?
+        - Because as Object-Oriented Programing have Class-Instance, Prefab is samething in Unity GameObject. 
+    - [x] Prefab rule
+        - [x] Should Position / Rotation set to be 0?
+            - This is because Prefab is template of GameObject and copy will create based on Prefab. 
+    - [x] Create Prefab
+        - Create Folder in Projet Browser -> then drag Hierarchy item to ProjectBrowser Folder
+    - [x] Position Prefab instance GameObject
+    - [x] Add Colision detection by Trigger
+        - [x] Change Project Item Collider to ```Is Trigger``` enabled.
+        - [x] Check Collider Tag where target have expected tag or not.
+            - Collider.CompareTag() : http://docs.unity3d.com/ja/current/ScriptReference/Component.CompareTag.html
+            - Component.Tag : http://docs.unity3d.com/ja/current/ScriptReference/Component-tag.html
+            - Tag and Layers Manager : http://docs.unity3d.com/ja/current/Manual/class-TagManager.html
+            - Set Tag to Target GameObject to use Collider.CompareTag().
+                - ```Inspector > Tag```, set Player.
+        - [x] Destroy Self GameObject
+            - Destroy(This.gameObject);
 
 Todo
 ----

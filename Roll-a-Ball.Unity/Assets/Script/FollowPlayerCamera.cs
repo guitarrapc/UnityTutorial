@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-namespace RollABall
+namespace Assets.Script
 {
     public class FollowPlayerCamera : MonoBehaviour
     {
