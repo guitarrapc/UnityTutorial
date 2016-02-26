@@ -1654,7 +1654,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1988257194}
   - 114: {fileID: 1988257195}
-  - 114: {fileID: 1988257196}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1688,17 +1687,6 @@ MonoBehaviour:
   ScoreLabel: {fileID: 1887577385}
   ElapsedTimeLabel: {fileID: 2064791611}
   WinnerLabel: {fileID: 710289059}
---- !u!114 &1988257196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1988257193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b69ec3097ac9ee54a887c87872631bbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2058862485 stripped
 Transform:
   m_PrefabParentObject: {fileID: 473874, guid: c774ec3d71afc0b4d873b7fdc02a9f5b, type: 2}
