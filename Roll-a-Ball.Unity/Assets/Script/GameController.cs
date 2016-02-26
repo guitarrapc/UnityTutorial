@@ -1,21 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour
+namespace Assets.Script
 {
-    public Text ScoreLabel;
-    public GameObject WinnerLabel;
-
-    public void Update()
+    public class GameController : MonoBehaviour
     {
-        // 残数表示
-        var count = GameObject.FindGameObjectsWithTag("Item").Length;
-        ScoreLabel.text = count.ToString();
+        public Text ScoreLabel;
+        public GameObject WinnerLabel;
 
-        // クリア時の処理
-        if (count == 0)
+        public void Update()
         {
-            WinnerLabel.SetActive(true);
+            // 残数表示
+            var count = GameObject.FindGameObjectsWithTag("Item").Length;
+            ScoreLabel.text = count.ToString();
+
+            // クリア時の処理
+            if (count == 0)
+            {
+                WinnerLabel.SetActive(true);
+            }
         }
     }
 }

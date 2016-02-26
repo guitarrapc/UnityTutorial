@@ -166,7 +166,7 @@ Done
     - All Children position is based on Parent position.
         - This means if Parent position is 10, 10, 10 then even if you sat children position 0,0,0 world position will be calculated from parent position 10,10,10.
     - Would be better always set parent as 0, 0, 0?
-- [ ] Active
+- [x] Active
     - [Tutorial 6](https://github.com/unity3d-jp/FirstTutorial/wiki/6.%E3%82%B1%E3%82%99%E3%83%BC%E3%83%A0%E3%81%AE%E3%82%AF%E3%83%AA%E3%82%A2%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
     - All GameObject have property ```Active```
         - If you set this as InActive, then GameObject will not be show in GameView.
@@ -177,6 +177,32 @@ Done
     - [x] create public field to GameController to accept ```GameObject``` of FinishLabel
         - [x] Bind FinishLabel to the Script from Inspector
     - [x] Add Condition when count == 0, WinnerLabel is Active.       
+- [x] Bright Materia
+    - [Tutorial 7](https://github.com/unity3d-jp/FirstTutorial/wiki/7.%E9%9A%9C%E5%AE%B3%E7%89%A9%E3%81%A8%E3%83%AA%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%81%AE%E8%BF%BD%E5%8A%A0)
+    - [x] Create material at Project Browser
+    - [x] Name it as DangerWallMaterial
+    - [x] Set Albedo colour as Red
+    - [x] Set Emission colour as Red
+- [x] Create GameObject for Trap
+    - [Tutorial 7](https://github.com/unity3d-jp/FirstTutorial/wiki/7.%E9%9A%9C%E5%AE%B3%E7%89%A9%E3%81%A8%E3%83%AA%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%81%AE%E8%BF%BD%E5%8A%A0)
+    - [x] Create Cube Object as DangerWall
+    - [x] Attach DangerWAllMaterial to DangerWall GameObject
+    - [x] Set it as Prefab
+    - [x] Instantiate items from prefab
+    - [x] Create Empty GameObject as Traps, and set scale as 1,1,1. position as 0,0,0
+    - [x] Attach all DangerWall gameobjects inside Traps
+    - [x] Set Traps as Static, as it were never move. 
+- [x] Light
+    - [Tutorial 7](https://github.com/unity3d-jp/FirstTutorial/wiki/7.%E9%9A%9C%E5%AE%B3%E7%89%A9%E3%81%A8%E3%83%AA%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%81%AE%E8%BF%BD%E5%8A%A0)
+    - [x] Change Brightness
+        - Select DirectionalLight and set Intensity from 1.0 to 0.7 (Can be make 0, looks like night effect!) 
+- [x] SceneManager
+    - [Tutorial 7](https://github.com/unity3d-jp/FirstTutorial/wiki/7.%E9%9A%9C%E5%AE%B3%E7%89%A9%E3%81%A8%E3%83%AA%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%81%AE%E8%BF%BD%E5%8A%A0)
+    - [x] Create DangerWallRestartScene Script to restart scene when player collision danger wall.
+    - [x] Detect Collision by ```void OnCollisionEnter(Collision hit)```
+    - [x] Change Application as it were depricated. ```Application.LoadLevel(Application.loadedLevel);```
+        - [x] Replace with SceneManager ```SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name)```
+        - Ref : http://qiita.com/kyubuns/items/d7f8c26250a6744c508e
 
 Todo
 ----
