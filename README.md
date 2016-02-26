@@ -161,6 +161,22 @@ Done
     - [Tutorial 5](https://github.com/unity3d-jp/FirstTutorial/wiki/5.%E3%82%B1%E3%82%99%E3%83%BC%E3%83%A0%E3%81%AEui%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
     - [x] Add Tag by ```Menu bar > Edit > Tags and Layer``` add Tags by + and set name.
     - Add ```Item``` Tag.
+- [x] Position fix
+    - If you had set GameObject inside Empty, then Empty is Parent and items inside will be children.
+    - All Children position is based on Parent position.
+        - This means if Parent position is 10, 10, 10 then even if you sat children position 0,0,0 world position will be calculated from parent position 10,10,10.
+    - Would be better always set parent as 0, 0, 0?
+- [ ] Active
+    - [Tutorial 6](https://github.com/unity3d-jp/FirstTutorial/wiki/6.%E3%82%B1%E3%82%99%E3%83%BC%E3%83%A0%E3%81%AE%E3%82%AF%E3%83%AA%E3%82%A2%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
+    - All GameObject have property ```Active```
+        - If you set this as InActive, then GameObject will not be show in GameView.
+        - So it can be use for timing when to show GameObject.
+    - [x] Create ```Lable``` for Finish -> FinishLabel.
+        - [x] Set position and default text
+        - [x] Set Item as InActive at Inspector (means default)
+    - [x] create public field to GameController to accept ```GameObject``` of FinishLabel
+        - [x] Bind FinishLabel to the Script from Inspector
+    - [x] Add Condition when count == 0, WinnerLabel is Active.       
 
 Todo
 ----
