@@ -129,6 +129,38 @@ Done
                 - ```Inspector > Tag```, set Player.
         - [x] Destroy Self GameObject
             - Destroy(This.gameObject);
+- [x] Canvas
+    - [Tutorial 5](https://github.com/unity3d-jp/FirstTutorial/wiki/5.%E3%82%B1%E3%82%99%E3%83%BC%E3%83%A0%E3%81%AEui%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
+    - [x] Create Canvas
+        - Now Canvas can contains UI item to draw item inside
+        - Automatically create ```EventSystem``` GameObject
+    - [x] UI Scale mode to be ```Scale with Screen Size```
+    - Should be better move Scene view from GAmeView like to near the Canvas. This is because GameView will draw by Canvas + SceneView Item.
+- [x] Text
+    - [Tutorial 5](https://github.com/unity3d-jp/FirstTutorial/wiki/5.%E3%82%B1%E3%82%99%E3%83%BC%E3%83%A0%E3%81%AEui%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
+    - [x] Create Text object inside Canvas
+    - [x] Rocate Text by Scaling position of Canvas
+    - [x] Change Scale
+    - [x] Change Font Size
+    - [x] Change Label
+- [x] GameController
+    - [Tutorial 5](https://github.com/unity3d-jp/FirstTutorial/wiki/5.%E3%82%B1%E3%82%99%E3%83%BC%E3%83%A0%E3%81%AEui%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
+    - Message Dispatcher from Event to the Text
+    - [x] Create Empty
+    - [x] Taging with ```GameController```
+    - [x] Apply ```Item``` Tag to Prefab item ```Item```.
+        - This apply tag change to all instantiate items.
+    - [x] Create GameController Script 
+        - [x] Count up Taged items and apply change to Label.
+            - ```GameObject.FindGameObjectsWithTag (<string>tagName).Length```
+        - [x] Create public field to accept Label GameObject binding with Script.
+        - [x] Apply count change to label.text.
+    - [x] Bind Script to GameController
+    - [x] Bind Lebel to GameController Script Public Field by drag and drop Label in Hieralchy -> GameController Inspector > GameController public Field.
+- [x] Tag and Layer
+    - [Tutorial 5](https://github.com/unity3d-jp/FirstTutorial/wiki/5.%E3%82%B1%E3%82%99%E3%83%BC%E3%83%A0%E3%81%AEui%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
+    - [x] Add Tag by ```Menu bar > Edit > Tags and Layer``` add Tags by + and set name.
+    - Add ```Item``` Tag.
 
 Todo
 ----
