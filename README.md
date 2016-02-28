@@ -268,9 +268,34 @@ Roll-a-Ball
         - [x] Create Enemy
         - [x] Create Bullet (Only Sprite)
         - [x] Create Explode
-    - Create Prefab.
-        
-    
+    - [x] Create Prefab.
+    - [x] Set All Prefab Position to 0,0,0 (actually only x and y. z always 0 in 2D mode)
+    - [x] Remove ```Apply Root Motion``` for 2D.
+        - It doesn't use in 2D and will be break what you desire.
+- [x] Rigidbody2D
+    - [Tutorial 2](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC02%E5%9B%9E-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E7%A7%BB%E5%8B%95)
+    - RigidBody for 2D
+    - [x] Set Gravity Scale to 0
+    - Script to move Player
+        - [x] Add Component > C# Script
+        - [x] Vector2
+            - [Tutorial 2](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC02%E5%9B%9E-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E7%A7%BB%E5%8B%95)
+            - As this game is 2D, you don't need to use Vector3.
+            - Vector2 can be determine by Input. On this time use Keyboard.
+        - [x] Normalize Vector
+            - With 2D, direction can be determine by Unit Vector.
+            - This can be calculate from ```normalized``` reaonly property like ```Vector2(x, y).normalized```
+            - normalized means treat magnitude as always 1. so you can just obtain which direction it is.
+        - [x] Velocity
+            - Now you can handle Direction. Velocity is rate for Acceralate.
+                - Difference between Velocity property and AddForce() method is ```resistor```.
+                - As Velocity is just a accelarate value, means there's no resistor condideration == max speed from first step.
+                - OTH, AddForce() is method. It add acceralate to object. base object velocity is 0, so AddForce() will slowly add force. It's like there are resistor.
+- [x] Camera
+    - [Tutorial 2](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC02%E5%9B%9E-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E7%A7%BB%E5%8B%95)
+    - [x] Projection
+        - As this is 2D, don't need to be Perspective. Change Projection to be ```Orthographic```
+        - Change ```Size``` to be 3 to limit stage size.
 
 Todo
 ====
@@ -278,9 +303,12 @@ Todo
 - [ ] Understand Unity GameObject LifeCycle
     - When Update() is call?
     - When FixedUpdate() is call?
+    - http://docs.unity3d.com/ja/current/Manual/ExecutionOrder.html
 - [ ] How to determine method name for event
 - [ ] Understand Attribute for Script
-
+- [ ] How to change FPS from Default (30) to 60.
+    - [x] Application.targetFrameRate = 60; in ```Awake(){}```
+    - [ ] Is it really effect?
 
 Disclaimer
 ==== 
