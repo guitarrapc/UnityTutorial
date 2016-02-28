@@ -14,11 +14,15 @@ namespace Assets.Script
             }
 
             // Obtain Input
-            var x = Input.GetAxis("Horizontal");
-            var z = Input.GetAxis("Vertical");
-
+            var keyX = Input.GetAxis("Horizontal");
+            var keyY = Input.GetAxis("Vertical");
+            var mouseX = Input.GetAxis("Mouse X");
+            var mouseY = Input.GetAxis("Mouse Y");
+            var x = keyX + mouseX;
+            var y = keyY + mouseY;
+            
             var rigidBody = GetComponent<Rigidbody>();
-            rigidBody.AddForce(x * Speed, 0, z * Speed);
+            rigidBody.AddForce(x * Speed, 0, y * Speed);
         }
     }
 }

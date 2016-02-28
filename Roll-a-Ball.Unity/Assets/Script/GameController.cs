@@ -14,8 +14,7 @@ namespace Assets.Script
         public GameObject FinishLabel;
 
         private int _initialItemCount;
-        private float timeLimit;
-        private float deltaTimer;
+        private float _timeLimit;
 
         public void Start()
         {
@@ -24,7 +23,7 @@ namespace Assets.Script
             ScoreLabel.text = "Score : 0";
             TimeLimitLabel.text = "TimeLimit : " + GameOverLimit;
             ElapsedTimeLabel.text = "Elapsed time : 00:00:00";
-            timeLimit = GameOverLimit;
+            _timeLimit = GameOverLimit;
         }
 
         public void Update()
@@ -34,25 +33,24 @@ namespace Assets.Script
             ElapsedTimeLabel.text = string.Format("Elapsed time : {0:00}:{1:00}:{2:00}", elapsedTime.Minutes, elapsedTime.Seconds, elapsedTime.TotalMilliseconds);
 
             // 制限時間表示
-            if (Time.time > timeLimit) timeLimit = 0;
-            timeLimit -= Time.deltaTime;
-            TimeLimitLabel.text = "TimeLimit : " + (int)timeLimit;
+            if (Time.time > _timeLimit) _timeLimit = 0;
+            _timeLimit -= Time.deltaTime;
+            TimeLimitLabel.text = "TimeLimit : " + (int)_timeLimit;
 
             // 残数表示
             var itemCount = GameObject.FindGameObjectsWithTag("Item").Length;
             var score = _initialItemCount - itemCount;
             ScoreLabel.text = string.Format("Score : " + score);
 
-            // クリア時の処理
-            if (itemCount == 0)
+            if (itemCount == 0 && _timeLimit > 0)
             {
+                // クリア時の処理
                 FinishLabel.GetComponent<Text>().text = "You Win!!";
                 FinishLabel.SetActive(true);
             }
-
-            // GameOver 処理
-            if (timeLimit <= 0)
+            else if (_timeLimit <= 0)
             {
+                // GameOver 処理
                 FinishLabel.GetComponent<Text>().text = "Game Over....";
                 FinishLabel.SetActive(true);
             }

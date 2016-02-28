@@ -204,6 +204,15 @@ Done
         - [x] Replace with SceneManager ```SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name)```
         - Ref : http://qiita.com/kyubuns/items/d7f8c26250a6744c508e
 
+Additional
+----
+
+- [x] Add TimeLimit
+    - Timer.deltaTime
+- [x] Add GameOver
+    - Label + TimeLimit 
+- [x] Add Mouse Move X/Y
+
 Todo
 ----
 
