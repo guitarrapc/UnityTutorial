@@ -1,7 +1,10 @@
 Reference https://github.com/unity3d-jp/FirstTutorial/wiki for Unity Project tutorial.
 
 Done
------
+====
+
+Roll-a-Ball
+----
 
 - [x] Use Unity 5.3.x Pro (latest as possible)
     - [x] Open with different version of Unity
@@ -203,9 +206,11 @@ Done
     - [x] Change Application as it were depricated. ```Application.LoadLevel(Application.loadedLevel);```
         - [x] Replace with SceneManager ```SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name)```
         - Ref : http://qiita.com/kyubuns/items/d7f8c26250a6744c508e
+- [x] Build for Standalone
+    - Windows
+- [x] Run Build Game
 
-Additional
-----
+### Additional
 
 - [x] Add TimeLimit
     - Timer.deltaTime
@@ -213,8 +218,62 @@ Additional
     - Label + TimeLimit 
 - [x] Add Mouse Move X/Y
 
-Todo
+
+2D Shooting
 ----
+
+- [x] Player Settings
+    - [Before started](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E3%81%93%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E5%89%8D%E3%81%AB)
+    - Modify Player Resolution Settings
+    - ```Edit > Project Preference > PlayerSettings > Resolution and Presentation```
+    - 600 x 400
+- [x] Game View Resolution
+    - [Before started](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E3%81%93%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E5%89%8D%E3%81%AB)
+    - [x] Modify to 600x400
+- [x] Sprite
+    - [Tutorial 1](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC01%E5%9B%9E-%E3%82%B9%E3%83%97%E3%83%A9%E3%82%A4%E3%83%88%E3%81%A8%E3%82%B9%E3%83%97%E3%83%A9%E3%82%A4%E3%83%88%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BD%9C%E6%88%90)
+    - What is Sprite : http://docs.unity3d.com/ja/current/ScriptReference/Sprite.html
+        - Spirite Object in 2D Game Play
+    - [x] Texture Type
+        - Should set as Sprite
+    - [x] Sprite Mode
+        - Multiple : If Texture contains more than one sprite
+        - Single :  If Texture contains only one sprite
+    - [x] Pixcels per Units
+        - Unity of measure in Unity == ```Unit```
+        - 1 Unit == 1m
+        - Pixcels per units express relationship with Pixcel and Unit.
+        - Pixcels Per Unit == 1
+            - 1 Pixcel size = 1 Unit Size
+        - Pixcels Per Unit == 100
+            - 100 Pixcel = 1 Unity
+- [x] Sprite Editor
+    - [Tutorial 1](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC01%E5%9B%9E-%E3%82%B9%E3%83%97%E3%83%A9%E3%82%A4%E3%83%88%E3%81%A8%E3%82%B9%E3%83%97%E3%83%A9%E3%82%A4%E3%83%88%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BD%9C%E6%88%90)
+    - 1 Texture would be contains more than 1 Sprite because of it's efficiecy.
+         - Problem is "How to devide sprite for each GameObject from 1 Texture."
+         - Resolution is set Sprite area in Texture when import texture. 
+    - [x] Open ```Sprite Editor``` from Inspector View
+    - [x] Select ```Slice``` on left top.
+        - [x] Type == ```Automatic``` means automatically slice Sprite.
+        - [x] Change Type to ```Grid by cell Size```
+        - [x] Set Slice size in ```Pixcel size``` than run slice.
+        - [x] Apply to chang takes effects.
+- [x] Animation
+    - [Tutorial 1](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC01%E5%9B%9E-%E3%82%B9%E3%83%97%E3%83%A9%E3%82%A4%E3%83%88%E3%81%A8%E3%82%B9%E3%83%97%E3%83%A9%E3%82%A4%E3%83%88%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BD%9C%E6%88%90)
+    - [x] Create Animation
+        - Drag and Drop > Select Folder name to be created.
+    - Change Hierarchy GameObject Name to ```Player```, change Animation name to ```Normal```, ```Player```.
+    - [x] Create Animations
+        - [x] Create Player
+        - [x] Create Enemy
+        - [x] Create Bullet (Only Sprite)
+        - [x] Create Explode
+    - Create Prefab.
+        
+    
+
+Todo
+====
 
 - [ ] Understand Unity GameObject LifeCycle
     - When Update() is call?
@@ -224,6 +283,6 @@ Todo
 
 
 Disclaimer
----- 
+==== 
 
 - Visual Studio Tools for Unity 2.2 couldn't work with Unity 5.4.
