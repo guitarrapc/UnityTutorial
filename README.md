@@ -296,6 +296,43 @@ Roll-a-Ball
     - [x] Projection
         - As this is 2D, don't need to be Perspective. Change Projection to be ```Orthographic```
         - Change ```Size``` to be 3 to limit stage size.
+- [x] Add Bullet
+    - [Tutorial 3](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC03%E5%9B%9E-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%8B%E3%82%89%E5%BC%BE%E3%82%92%E6%92%83%E3%81%A4)
+    - [x] Add RigitBody2D to the bullet.
+    - [x] Set Bullet position in SceneView and drag to container gameobject. (PlayerBullet)
+    - [x] Create Prefab for contaier object PlayerBullet.
+    - [x] Create Script and write as bullet just go up when game start.
+        - Attach Script to PlayerBullet Prefab.
+        - gamestart : Start()
+        - set speed : public int Speed = 10;
+        - for bullet, that script attached : gameobject.GetComponent<RigidBody2D>().velocity
+        - just go up : .velocity = transform.up.normalized * Speed;
+- [x] Coroutine
+    - [Tutorial 3](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC03%E5%9B%9E-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%8B%E3%82%89%E5%BC%BE%E3%82%92%E6%92%83%E3%81%A4)
+    - [Unity - Cotoutine](http://docs.unity3d.com/ja/current/Manual/Coroutines.html)
+    - IEnumerator to control function execution timing by user script.
+        - As there are ```Update()``` Method to call function in every frame, and can be easily stop Game World because of function cannot be finished in the flame AND ALSO Update() will call too match time and hard to control ```when to call next```.
+        - So a lot of times Unity recomend to use ```IEnumerator Start(){ AnyFunction}``` to call you function with ```yield return```.
+        - As there are Enumerator in C#, Coroutine will return yield execution result and continus on next.
+        - You can controll interval of ```yield return``` with ``yield return new WaitForSeconds(float)```, besides Update() can't be controllable.
+        - Just remember, Coroutine is not silver bullet. Don't do like IEnumerator Update(). just use IEnumerator Start(), and be sure to be finish function as soon as possible.
+        - Detail about Coroutine : https://twitter.com/ufcpp/status/703933114427379712
+        - Detail about Why Task not coroutine : https://twitter.com/ufcpp/status/703934698435686400
+- [x] Spite - Sorting Layer
+    - [Tutorial 3](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC03%E5%9B%9E-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%8B%E3%82%89%E5%BC%BE%E3%82%92%E6%92%83%E3%81%A4)
+    - As there are Bullet overwrite Player object. This seems not natual, it's better draw Bullet first and orverwrite with Player Object. 
+    - Use ```Sorting Layer``` to control draw Sprite object order.
+    - Means Last Order Item will come to the top, tand first order item will be behind the last.
+    - [x] Create Sorting Layer
+        - ```Edit > Project Settings > Tags and Layer``` then select ```Sorting Layer``` Add 2 layers with this order. 
+            1. Bullet 
+            1. Player
+    - [x] Apply to Sprite.
+        - Set Player Sprite's Sorting Layer to ```Player```
+        - Set Bullet Sprite's sorting layer to ```Bullet```.
+            
+    
+
 
 Todo
 ====

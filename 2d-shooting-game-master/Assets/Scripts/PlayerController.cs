@@ -1,26 +1,40 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+namespace Assets.Scripts
 {
-    public float Speed = 5;
-
-    void Awake()
+    public class PlayerController : MonoBehaviour
     {
-        Application.targetFrameRate = 60;
-    }
+        public GameObject PlayerBullet;
+        public float Speed = 5;
 
-    void Update()
-    {
-        // Obtain where to move from Input. (Keyboard)
-        var x = Input.GetAxis("Horizontal");
-        var y = Input.GetAxis("Vertical");
-        
-        // Direction to move
-        var direction = new Vector2(x, y).normalized;
+        IEnumerator Start()
+        {
+            while (true)
+            {
+                // 弾を自機と同じ位置/角度で インスタンシェート (作成)
+                var bullet = Instantiate(PlayerBullet, transform.position, transform.rotation);
+                yield return new WaitForSeconds(0.05f);
+            }
+        }
 
-        // Apply Direction and Speed
-        GetComponent<Rigidbody2D>().velocity = direction * Speed;
+        void Awake()
+        {
+            Application.targetFrameRate = 60;
+        }
+
+        void Update()
+        {
+            // Obtain where to move from Input. (Keyboard)
+            var x = Input.GetAxis("Horizontal");
+            var y = Input.GetAxis("Vertical");
+
+            // Direction to move
+            var direction = new Vector2(x, y).normalized;
+
+            // Apply Direction and Speed
+            GetComponent<Rigidbody2D>().velocity = direction * Speed;
+        }
     }
 }
