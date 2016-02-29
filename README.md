@@ -318,7 +318,7 @@ Roll-a-Ball
         - Just remember, Coroutine is not silver bullet. Don't do like IEnumerator Update(). just use IEnumerator Start(), and be sure to be finish function as soon as possible.
         - Detail about Coroutine : https://twitter.com/ufcpp/status/703933114427379712
         - Detail about Why Task not coroutine : https://twitter.com/ufcpp/status/703934698435686400
-- [x] Spite - Sorting Layer
+- [x] Sprite - Sorting Layer
     - [Tutorial 3](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC03%E5%9B%9E-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%8B%E3%82%89%E5%BC%BE%E3%82%92%E6%92%83%E3%81%A4)
     - As there are Bullet overwrite Player object. This seems not natual, it's better draw Bullet first and orverwrite with Player Object. 
     - Use ```Sorting Layer``` to control draw Sprite object order.
@@ -330,8 +330,22 @@ Roll-a-Ball
     - [x] Apply to Sprite.
         - Set Player Sprite's Sorting Layer to ```Player```
         - Set Bullet Sprite's sorting layer to ```Bullet```.
-            
-    
+- [x] RequiredComponent Attribute
+    - There are several Attributes in Script.
+    - RequiredComponent Attribute means You must apply <RequiredComponent> to the GameObject that Script Attached. 
+- [x] Call other Script
+    - [Tutorial 4](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC04%E5%9B%9E-%E6%95%B5%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%82%88%E3%81%86)
+    - You can call other class/method/property which assigned to same GameObject by GetComponent<T>.
+    - Create some common script A.
+    - Attach script to GameObject X.
+    - Now other Script, which also attach to GameObject X, can call Script through GetComponent<T>(). 
+- [x] Transform.up
+    - Usually direction is calculated from World Point, there are another easy way "Transform.up".
+- [x] Transform Rotation
+    - In 2D, usually object direction is up. But you can flip direction to down or any with GameObject > Transform > Rotation.
+- [x] Child Element GameObject
+    - Create Empty Elemment under a GameObject. Now created is Child Element and affected by Parent GameObject.
+    - This can be use for Component of Large GameObject, like 1 enemy have many ShotPoint. 
 
 
 Todo

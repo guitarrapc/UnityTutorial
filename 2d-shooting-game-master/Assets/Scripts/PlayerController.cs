@@ -6,16 +6,16 @@ namespace Assets.Scripts
 {
     public class PlayerController : MonoBehaviour
     {
-        public GameObject PlayerBullet;
-        public float Speed = 5;
+        private SpaceShipController _spaceShipController;
 
         IEnumerator Start()
         {
+            _spaceShipController = GetComponent<SpaceShipController>();
             while (true)
             {
-                // 弾を自機と同じ位置/角度で インスタンシェート (作成)
-                var bullet = Instantiate(PlayerBullet, transform.position, transform.rotation);
-                yield return new WaitForSeconds(0.05f);
+                // 弾を自機と同じ位置/角度で作成
+                _spaceShipController.Shot(transform);
+                yield return new WaitForSeconds(_spaceShipController.ShotInterval);
             }
         }
 
@@ -34,7 +34,7 @@ namespace Assets.Scripts
             var direction = new Vector2(x, y).normalized;
 
             // Apply Direction and Speed
-            GetComponent<Rigidbody2D>().velocity = direction * Speed;
+            _spaceShipController.Move(direction);
         }
     }
 }
