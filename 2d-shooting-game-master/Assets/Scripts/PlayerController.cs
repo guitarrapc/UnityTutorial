@@ -37,16 +37,22 @@ namespace Assets.Scripts
             _spaceShipController.Move(direction);
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        void OnTriggerEnter2D(Collider2D collider)
         {
-            // あたった対象の削除
-            Destroy(other.gameObject);
+            // collider の Layer名取得
+            var layerName = LayerMask.LayerToName(collider.gameObject.layer);
 
-            // 爆発エフェクト
-            _spaceShipController.Explosion();
+            if (layerName == "Bullet(Enemy)" || layerName == "Enemy")
+            {
+                // 敵の弾/敵を削除
+                Destroy(collider.gameObject);
 
-            // 自分自身を削除
-            Destroy(gameObject);
+                // 爆発エフェクト
+                _spaceShipController.Explosion();
+
+                // 自分自身を削除
+                Destroy(gameObject);
+            }
         }
     }
 }

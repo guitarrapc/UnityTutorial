@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 430436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPosision (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 404672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPosision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 482944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPosision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 114: {fileID: 11473842}
   - 114: {fileID: 11498750}
   - 60: {fileID: 6032044}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,10 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c467e2775da404d84d59c9fd6fd1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.5
+  MoveSpeed: 0.3
   CanShot: 1
   ShotInterval: 0.3
-  Bullet: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
+  BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
+  ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
 --- !u!114 &11498750
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -381,14 +381,41 @@ Roll-a-Ball
             - Open Animation. ```Windows > Animation```
             - Add Event > Select OnAnimationFinish function
             - Move event to when Animation Finished
-        
-    
+    - [x] Create GameArea
+        - [x] Set OnColliderExit2D(Collider collider) to destroy collider when gameobject passed GameArea.
+
 Component | Dropping Object | Catch Ground
 ---- | ---- | ----
 Collider  | O (Shape to material)| O (Shape to Ground)
 RigidBody | O (With Gravity) | X
 
-- [ ] Shape Polygon Collider
+- [ ] Layer
+    - [Tutorial 5](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC05%E5%9B%9E-%E5%BD%93%E3%81%9F%E3%82%8A%E5%88%A4%E5%AE%9A%E3%81%A8%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A8%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC)
+    - Easiest way to handle Collider is Splitting layer.
+        - In this game I need to handle following combination will NOT destloy gameobject.
+            - Player Bullet - Player     
+            - Enemy Bullet - Enemy
+            - Player Bullet - Player Bullet
+            - Enemy Bullet - Enemy Bullet
+            - Player - Player
+            - Enemy - Enemy
+    - [x] Add Layer ```Edit > Project Settings > Tags and Layers```
+        - Player
+        - Enemy
+        - Bullet(Player)
+        - Bullet(Enemy)
+        - GameArea
+    - [x] Apply Layer to Prefab and GameObject.
+    - [x] Create Layer collistion Matrix. ```Edit > Project Settings > Physics 2D```
+        - You can hadle Layer collision with this matrix.
+    - [x] Detail Handling with Script.
+        - Even you set Layer Collision, Player still desloy right after game start. This is because GameArea Collision is affecting Players OnColliectionEnter2D.
+        - Let's think this situation.
+            - GameArea should be area to handle GameObject. Means It SHOULD DESTLOY GAMEOBJECT WHEN GAMEOBJECT is OnTriggerEnter2D.
+            - This can't be handle with Layer Collision Matrix and required Script handling.
+        - [x] Get Layer ```LayerMask.LayerToName(collider.gameObject.layer);```
+        - [x] If check for LayerName.... By String!?
+        - [x] Destroy
 
 
 Todo
@@ -403,6 +430,7 @@ Todo
 - [ ] How to change FPS from Default (30) to 60.
     - [x] Application.targetFrameRate = 60; in ```Awake(){}```
     - [ ] Is it really effect?
+- [ ] Is there any way to detect Layer name, not by string?
 
 Disclaimer
 ==== 
