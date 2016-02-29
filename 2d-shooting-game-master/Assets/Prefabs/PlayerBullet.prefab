@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413414}
   - 212: {fileID: 21236508}
+  - 60: {fileID: 6013860}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -42,6 +43,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 433282}
   - 212: {fileID: 21298708}
+  - 60: {fileID: 6008042}
   m_Layer: 0
   m_Name: Bullet (1)
   m_TagString: Untagged
@@ -104,6 +106,50 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &6008042
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140650}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.012289777, y: 0.078032196}
+      - {x: -0.028353974, y: 0.028354123}
+      - {x: -0.016547367, y: -0.024096608}
+      - {x: -0.01032187, y: -0.07606444}
+      - {x: 0.012289807, y: -0.07409659}
+      - {x: 0.018515274, y: -0.033774614}
+      - {x: 0.028354093, y: 0.032450736}
+      - {x: 0.008354232, y: 0.078032196}
+--- !u!60 &6013860
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109004}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.012289777, y: 0.078032196}
+      - {x: -0.028353974, y: 0.028354123}
+      - {x: -0.016547367, y: -0.024096608}
+      - {x: -0.01032187, y: -0.07606444}
+      - {x: 0.012289807, y: -0.07409659}
+      - {x: 0.018515274, y: -0.033774614}
+      - {x: 0.028354093, y: 0.032450736}
+      - {x: 0.008354232, y: 0.078032196}
 --- !u!114 &11424026
 MonoBehaviour:
   m_ObjectHideFlags: 1

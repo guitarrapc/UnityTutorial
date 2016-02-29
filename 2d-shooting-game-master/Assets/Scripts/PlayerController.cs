@@ -36,5 +36,17 @@ namespace Assets.Scripts
             // Apply Direction and Speed
             _spaceShipController.Move(direction);
         }
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            // あたった対象の削除
+            Destroy(other.gameObject);
+
+            // 爆発エフェクト
+            _spaceShipController.Explosion();
+
+            // 自分自身を削除
+            Destroy(gameObject);
+        }
     }
 }

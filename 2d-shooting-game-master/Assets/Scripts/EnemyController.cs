@@ -2,30 +2,34 @@
 using System.Collections;
 using System.Linq;
 
-public class EnemyController : MonoBehaviour
+namespace Assets.Scripts
 {
-    private SpaceShipController _spaceshipController;
 
-    IEnumerator Start()
+    public class EnemyController : MonoBehaviour
     {
-        _spaceshipController = GetComponent<SpaceShipController>();
+        private SpaceShipController _spaceshipController;
 
-        // y軸 (up) のマイナス => 下に移動
-        _spaceshipController.Move(transform.up * -1);
-
-        // 弾を打たない属性の場合はここでコルーチンも終わり
-        if (!_spaceshipController.CanShot) yield break;
-
-        // 弾の発射
-        while (true)
+        IEnumerator Start()
         {
-            // 子要素となるShotPosition 要素数を取得 -> 子要素のTransformを取得
-            foreach (var shotPosition in Enumerable.Range(0, transform.childCount).Select(index => transform.GetChild(index)))
+            _spaceshipController = GetComponent<SpaceShipController>();
+
+            // y軸 (up) のマイナス => 下に移動
+            _spaceshipController.Move(transform.up * -1);
+
+            // 弾を打たない属性の場合はここでコルーチンも終わり
+            if (!_spaceshipController.CanShot) yield break;
+
+            // 弾の発射
+            while (true)
             {
-                // 子要素のTranform と同じ位置、角度から発射
-                _spaceshipController.Shot(shotPosition);
+                // 子要素となるShotPosition 要素数を取得 -> 子要素のTransformを取得
+                foreach (var shotPosition in Enumerable.Range(0, transform.childCount).Select(index => transform.GetChild(index)))
+                {
+                    // 子要素のTranform と同じ位置、角度から発射
+                    _spaceshipController.Shot(shotPosition);
+                }
+                yield return new WaitForSeconds(_spaceshipController.ShotInterval);
             }
-            yield return new WaitForSeconds(_spaceshipController.ShotInterval);
         }
     }
 }

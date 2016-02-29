@@ -1,22 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class SpaceShipController : MonoBehaviour
+namespace Assets.Scripts
 {
-    public float Speed;
-    public bool CanShot;
-    public float ShotInterval;
-    public GameObject Bullet;
-
-    public void Shot(Transform origin)
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class SpaceShipController : MonoBehaviour
     {
-        // 同じ位置、角度から弾を発射
-        Instantiate(Bullet, origin.position, origin.rotation);
-    }
+        public float MoveSpeed;
+        public bool CanShot;
+        public float ShotInterval;
 
-    public void Move(Vector2 direction)
-    {
-        GetComponent<Rigidbody2D>().velocity = direction * Speed;
+        public GameObject BulletObject;
+        public GameObject ExplosionObject;
+
+        public void Explosion()
+        {
+            Instantiate(ExplosionObject, transform.position, transform.rotation);
+        }
+
+        public void Shot(Transform origin)
+        {
+            // 同じ位置、角度から弾を発射
+            Instantiate(BulletObject, origin.position, origin.rotation);
+        }
+
+        public void Move(Vector2 direction)
+        {
+            GetComponent<Rigidbody2D>().velocity = direction * MoveSpeed;
+        }
     }
 }

@@ -346,6 +346,49 @@ Roll-a-Ball
 - [x] Child Element GameObject
     - Create Empty Elemment under a GameObject. Now created is Child Element and affected by Parent GameObject.
     - This can be use for Component of Large GameObject, like 1 enemy have many ShotPoint. 
+- [x] Collider
+    - [Tutorial 5](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC05%E5%9B%9E-%E5%BD%93%E3%81%9F%E3%82%8A%E5%88%A4%E5%AE%9A%E3%81%A8%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A8%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC)
+    - [Unity - Collier](http://docs.unity3d.com/ja/current/ScriptReference/Collider.html)
+    - [UnityのRigidbodyとColliderで衝突判定](http://qiita.com/yando/items/0cd2daaf1314c0674bbe)
+        - Would be better Collier and RigidBody are pair to set into Component.
+        - When you add Collier, think like below.
+        - If you Check on ```IsTrigger```, Collider will not reflect material and passthru. It means DroppingObject will go through the Ground.
+        - ```IsTrigger``` is useful for triggering any event when Item is touched. 
+    - [x] Add Collider
+        - [x] Add Box Collider 2D to Player.
+            - [x] Set size to 0.06 x 0.06 
+        - [x] Add Polygon Collider to Enemy
+            - [x] Modify Mesh for Polygon Collider is not match to the Sprite shape.
+                - Open Sprite and Change Texture Type to ```Advanced```
+                - Change MeshType
+                - Change Extrude Edges
+            - [x] Also modify Polygon Collider directly.
+        - [x] Add Circle Collider to Enemy Bullet.
+        - [x] Add Polygon Collider to Player Bullet.
+            - [x] Copy / Paste Component
+    - [x] Add Explosion Effect inside SpaceShipController
+        - Instantiate Explosion GameObject at caller gameobject transform.
+    - [x] Add ```OnTriggerEnter2D(Collider2D other)```
+        - Detroy(other.gameObject)
+        - call Explosion effect
+        - Destroy(self)
+    - [x] Handle lopp for Explosion effect.
+        - Change Loop setting in Animation
+        - No ```Loop Time``` means run effect only once.
+    - [x] Remove Animation Effect 
+        - [x] Destroy Explosion gameObject when OnAnimationFinish() event called.
+        - [x] Link OnAnimationFinish Event to Animation
+            - Open Animation. ```Windows > Animation```
+            - Add Event > Select OnAnimationFinish function
+            - Move event to when Animation Finished
+        
+    
+Component | Dropping Object | Catch Ground
+---- | ---- | ----
+Collider  | O (Shape to material)| O (Shape to Ground)
+RigidBody | O (With Gravity) | X
+
+- [ ] Shape Polygon Collider
 
 
 Todo
