@@ -794,6 +794,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WavePrefab:
   - {fileID: 167616, guid: 5c55dae3942a2534cbe38fed6e17a94f, type: 2}
+  - {fileID: 159158, guid: 1def400ee071ce440b8a4d70cbb1c99d, type: 2}
+  - {fileID: 128486, guid: 83fa784b5cc6eb9489fc84a1ca374661, type: 2}
+  - {fileID: 102428, guid: 5a94c4f372ee1514fb44b0f42def6d99, type: 2}
+  - {fileID: 175918, guid: 50fecbdafce9f7340a9ba7ae2c16a0ab, type: 2}
+  - {fileID: 187752, guid: 88a21b39169aef64d99ee262c1d87c2a, type: 2}
 --- !u!4 &1969273300
 Transform:
   m_ObjectHideFlags: 0
