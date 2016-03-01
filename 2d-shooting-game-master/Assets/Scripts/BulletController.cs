@@ -7,6 +7,7 @@ namespace Assets.Scripts
     {
         public int Speed = 10;
         public float LifeTime = 5;
+        public int AttackPower = 1;
 
         void Start()
         {

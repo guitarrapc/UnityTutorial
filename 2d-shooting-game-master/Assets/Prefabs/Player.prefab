@@ -171,6 +171,7 @@ MonoBehaviour:
   ShotInterval: 0.1
   BulletObject: {fileID: 106460, guid: a0884ad54dbee814ba8b7b67fa3ed7b0, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
+  HitPoint: 0
 --- !u!212 &21293374
 SpriteRenderer:
   m_ObjectHideFlags: 1

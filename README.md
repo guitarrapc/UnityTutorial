@@ -458,7 +458,18 @@ RigidBody | O (With Gravity) | X
     - [Tutorial 8](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC08%E5%9B%9E-%E9%9F%B3%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B)
     - SE can be assign with ```Audio Source``` component.
         - [x] Call Play from Script. ```GetComponent<AudioSource>().Play();```
-
+- [x] View port
+    - [Tutorial 9](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC09%E5%9B%9E-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E7%A7%BB%E5%8B%95%E5%88%B6%E9%99%90%E3%81%A8%E6%A7%98%E3%80%85%E3%81%AA%E4%BF%AE%E6%AD%A3)
+    - [Unity - Camera](http://docs.unity3d.com/ja/current/ScriptReference/Camera.html)
+    - View Port is "Area where Camera will view". 
+    - View Port will be range of 0,0 (left buttom)-> 1,1 (right top)
+- [x] Abstract Class
+    - [Tutorial 10](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC10%E5%9B%9E-%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B)
+    - SpaceShipController can be Abstract class. PlayerController and EnemyController will derive from base class.
+    - As Unity not accept Abstract class to be attach, common public Field can be inside Abstract class.
+- [x] Script Execution Order
+    - [Tutorial 10](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC10%E5%9B%9E-%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B)
+        - There are Script Execution Order to manage script running order.
          
 
 

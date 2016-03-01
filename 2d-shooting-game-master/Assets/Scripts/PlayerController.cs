@@ -81,5 +81,10 @@ namespace Assets.Scripts
                 FindObjectOfType<GameManager>().GameOver();
             }
         }
+
+        protected override Animator GetAnimator()
+        {
+            return null;
+        }
     }
 }

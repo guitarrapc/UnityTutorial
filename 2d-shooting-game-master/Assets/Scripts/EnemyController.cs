@@ -5,11 +5,14 @@ using System;
 
 namespace Assets.Scripts
 {
-
     public class EnemyController : SpaceShipControllerBase
     {
+        private Animator _animator;
+
         IEnumerator Start()
         {
+            _animator = GetComponent<Animator>();
+
             // y軸 (up) のマイナス => 下に移動
             Move(transform.up * -1);
 
@@ -39,17 +42,37 @@ namespace Assets.Scripts
             // collider の Layer名取得
             var layerName = LayerMask.LayerToName(collider.gameObject.layer);
 
-            if (layerName == "Bullet(Player)" || layerName == "Player")
-            {
-                // Playerの弾/Playerを削除
-                Destroy(collider.gameObject);
+            // Player の弾、Player 以外は何もしない
+            if (layerName != "Bullet(Player)" && layerName != "Player") return;
 
+            // Player弾のTransform を取得
+            if (layerName == "Bullet(Player)")
+            {
+                var bulletTransform = collider.gameObject.transform.parent;
+                var bullet = bulletTransform.GetComponent<BulletController>();
+                HitPoint -= bullet.AttackPower;
+            }
+
+            // Playerの弾/Playerを削除
+            Destroy(collider.gameObject);
+
+            if (HitPoint <= 0)
+            {
                 // 爆発エフェクト
                 base.Explosion(ExplosionObject);
 
                 // 自分自身を削除
                 Destroy(gameObject);
             }
+            else
+            {
+                GetAnimator().SetTrigger("Damage");
+            }
+        }
+
+        protected override Animator GetAnimator()
+        {
+            return _animator;
         }
     }
 }

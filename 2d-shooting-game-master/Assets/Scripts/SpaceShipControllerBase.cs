@@ -13,7 +13,9 @@ namespace Assets.Scripts
         public GameObject BulletObject;
         public GameObject ExplosionObject;
 
-        public void Explosion(GameObject explosion)
+        public int HitPoint;
+
+        public virtual void Explosion(GameObject explosion)
         {
             Instantiate(explosion, transform.position, transform.rotation);
         }
@@ -25,5 +27,7 @@ namespace Assets.Scripts
         }
 
         protected abstract void Move(Vector2 direction);
+
+        protected abstract Animator GetAnimator();
     }
 }
