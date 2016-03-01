@@ -71,7 +71,7 @@ namespace Assets.Scripts
             {
                 // 敵の弾/敵を削除
                 Destroy(collider.gameObject);
-
+                
                 // 爆発エフェクト
                 base.Explosion(ExplosionObject);
 

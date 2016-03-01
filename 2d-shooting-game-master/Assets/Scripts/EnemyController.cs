@@ -9,6 +9,8 @@ namespace Assets.Scripts
     {
         private Animator _animator;
 
+        public int Point = 100;
+
         IEnumerator Start()
         {
             _animator = GetComponent<Animator>();
@@ -58,6 +60,9 @@ namespace Assets.Scripts
 
             if (HitPoint <= 0)
             {
+                // Score にポイント加算
+                FindObjectOfType<ScoreController>().AddPoint(Point);
+
                 // 爆発エフェクト
                 base.Explosion(ExplosionObject);
 

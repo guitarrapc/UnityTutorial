@@ -252,6 +252,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 30
+  Point: 300
 --- !u!212 &21268620
 SpriteRenderer:
   m_ObjectHideFlags: 1

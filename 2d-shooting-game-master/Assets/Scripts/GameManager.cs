@@ -6,7 +6,7 @@ namespace Assets.Scripts
     {
         public GameObject Player;
         private GameObject _title;
-
+        
         void Start()
         {
             _title = GameObject.Find("Title");
@@ -28,6 +28,9 @@ namespace Assets.Scripts
 
         public void GameOver()
         {
+            // ハイスコア保存
+            FindObjectOfType<ScoreController>().Save();
+
             _title.SetActive(true);
         }
 

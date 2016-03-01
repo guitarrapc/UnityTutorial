@@ -4724,6 +4724,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11406538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4741,6 +4742,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11408330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4758,6 +4760,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11408522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4775,6 +4778,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11425106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4792,6 +4796,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11425764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4809,6 +4814,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11439124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4826,6 +4832,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11440496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4843,6 +4850,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11443778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4860,6 +4868,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11451616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4877,6 +4886,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11456146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4894,6 +4904,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11460694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4911,6 +4922,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11461530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4928,6 +4940,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11463984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4945,6 +4958,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11470090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4962,6 +4976,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11474696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4979,6 +4994,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11480968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4996,6 +5012,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11482624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5013,6 +5030,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11483222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5030,6 +5048,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11486304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5047,6 +5066,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11489942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5064,6 +5084,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11493914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5081,6 +5102,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11495962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5098,6 +5120,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11498506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5115,6 +5138,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11499446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5132,6 +5156,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!114 &11499778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5149,6 +5174,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 4
+  Point: 30
 --- !u!212 &21203006
 SpriteRenderer:
   m_ObjectHideFlags: 1

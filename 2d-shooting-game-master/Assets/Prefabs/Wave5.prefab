@@ -752,6 +752,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 30
+  Point: 300
 --- !u!114 &11470034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -769,6 +770,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 30
+  Point: 300
 --- !u!114 &11488358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -786,6 +788,7 @@ MonoBehaviour:
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
   HitPoint: 30
+  Point: 300
 --- !u!212 &21228858
 SpriteRenderer:
   m_ObjectHideFlags: 1
