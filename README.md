@@ -416,6 +416,24 @@ RigidBody | O (With Gravity) | X
         - [x] Get Layer ```LayerMask.LayerToName(collider.gameObject.layer);```
         - [x] If check for LayerName.... By String!?
         - [x] Destroy
+- [ ] BackGround
+    - [Tutorial 6](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC06%E5%9B%9E-%E8%83%8C%E6%99%AF%E3%82%92%E4%BD%9C%E3%82%8B)
+    - [x] Quad
+        - [x] Create Empty GameObject 
+        - [x] Create ```3D > Quad``` inside GameObject.
+        - [x] Attach BackGround Material
+            - If you have several background meterials, then create multiple quad and apply each.
+        - [x] Tune Z position for Visualize order.
+            - larger amount will go back from smaller amount.
+            - 0 will come front of 0.1
+    - [ ] Move Material
+        - Use SetTextureOffset to move matrieal.
+        - [x] Confirm Material's Shader Texture Varialbe Name
+            - Unity basic shader often use ```_MainTex```
+            - You can confirm name with ```Select Matrial > Edit Shader > Compile and Show code``` ow Properties will show _MainTex or other.
+        - [x] Change Texture Wrap Mode to ```Repeat```
+        
+         
 
 
 Todo
