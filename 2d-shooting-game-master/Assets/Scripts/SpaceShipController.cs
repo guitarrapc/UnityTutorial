@@ -24,7 +24,7 @@ namespace Assets.Scripts
             Instantiate(BulletObject, origin.position, origin.rotation);
         }
 
-        public void Move(Vector2 direction)
+        protected virtual void Move(Vector2 direction)
         {
             GetComponent<Rigidbody2D>().velocity = direction * MoveSpeed;
         }

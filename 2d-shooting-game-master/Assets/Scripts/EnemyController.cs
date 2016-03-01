@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
+using System;
 
 namespace Assets.Scripts
 {
@@ -14,7 +15,7 @@ namespace Assets.Scripts
             _spaceShipController = GetComponent<SpaceShipController>();
 
             // y軸 (up) のマイナス => 下に移動
-            _spaceShipController.Move(transform.up * -1);
+            Move(transform.up * -1);
 
             // 弾を打たない属性の場合はここでコルーチンも終わり
             if (!_spaceShipController.CanShot) yield break;
@@ -30,6 +31,11 @@ namespace Assets.Scripts
                 }
                 yield return new WaitForSeconds(_spaceShipController.ShotInterval);
             }
+        }
+
+        private void Move(Vector2 direction)
+        {
+            GetComponent<Rigidbody2D>().velocity = direction * _spaceShipController.MoveSpeed;
         }
 
         void OnTriggerEnter2D(Collider2D collider)

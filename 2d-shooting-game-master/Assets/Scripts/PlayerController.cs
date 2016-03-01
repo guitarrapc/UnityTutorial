@@ -8,6 +8,11 @@ namespace Assets.Scripts
     {
         private SpaceShipController _spaceShipController;
 
+        void Awake()
+        {
+            Application.targetFrameRate = 60;
+        }
+
         IEnumerator Start()
         {
             _spaceShipController = GetComponent<SpaceShipController>();
@@ -24,11 +29,6 @@ namespace Assets.Scripts
             }
         }
 
-        void Awake()
-        {
-            Application.targetFrameRate = 60;
-        }
-
         void Update()
         {
             // Obtain where to move from Input. (Keyboard)
@@ -39,7 +39,30 @@ namespace Assets.Scripts
             var direction = new Vector2(x, y).normalized;
 
             // Apply Direction and Speed
-            _spaceShipController.Move(direction);
+            // _spaceShipController.Move(direction);
+
+            // velocity による移動から、transform.position に変更
+            Move(direction);
+        }
+
+        private void Move(Vector2 direction)
+        {
+            // View Port の取得
+            var min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+            var max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+
+            // Playerの現在位置取得
+            Vector2 playerPosition = transform.position;
+
+            // 移動量を position に追加
+            playerPosition += direction * _spaceShipController.MoveSpeed * Time.deltaTime;
+
+            // Player の位置を ViewPort 内に制限
+            playerPosition.x = Mathf.Clamp(playerPosition.x, min.x, max.x);
+            playerPosition.y = Mathf.Clamp(playerPosition.y, min.y, max.y);
+
+            // 制限をかけた値を Player の位置と修正する
+            transform.position = playerPosition;
         }
 
         void OnTriggerEnter2D(Collider2D collider)

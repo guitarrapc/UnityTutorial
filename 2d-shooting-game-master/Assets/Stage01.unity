@@ -256,7 +256,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.86}
 --- !u!1 &1050218331
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +480,10 @@ Prefab:
     - target: {fileID: 184790, guid: c990f84f54ac1144baccbc110a5e1688, type: 2}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263442, guid: c990f84f54ac1144baccbc110a5e1688, type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c990f84f54ac1144baccbc110a5e1688, type: 2}
