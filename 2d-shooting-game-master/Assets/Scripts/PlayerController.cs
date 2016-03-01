@@ -77,6 +77,8 @@ namespace Assets.Scripts
 
                 // 自分自身を削除
                 Destroy(gameObject);
+
+                FindObjectOfType<GameManager>().GameOver();
             }
         }
     }

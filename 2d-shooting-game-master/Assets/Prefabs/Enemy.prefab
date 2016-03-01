@@ -190,9 +190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890df1d17f860614b8f17a6fe83d6be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 2
-  CanShot: 1
-  ShotInterval: 3
+  MoveSpeed: 0.2
+  CanShot: 0
+  ShotInterval: 4
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
   ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
 --- !u!212 &21227398

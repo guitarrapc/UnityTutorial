@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890df1d17f860614b8f17a6fe83d6be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 2
+  MoveSpeed: 1
   CanShot: 1
   ShotInterval: 3
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890df1d17f860614b8f17a6fe83d6be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 2
+  MoveSpeed: 1
   CanShot: 1
   ShotInterval: 3
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890df1d17f860614b8f17a6fe83d6be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 2
+  MoveSpeed: 1
   CanShot: 1
   ShotInterval: 3
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
