@@ -457,15 +457,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11434706, guid: c990f84f54ac1144baccbc110a5e1688, type: 2}
+    - target: {fileID: 0}
       propertyPath: MoveSpeed
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 11434706, guid: c990f84f54ac1144baccbc110a5e1688, type: 2}
+    - target: {fileID: 0}
       propertyPath: BulletObject
       value: 
       objectReference: {fileID: 106460, guid: a0884ad54dbee814ba8b7b67fa3ed7b0, type: 2}
-    - target: {fileID: 11434706, guid: c990f84f54ac1144baccbc110a5e1688, type: 2}
+    - target: {fileID: 0}
       propertyPath: ExplosionObject
       value: 
       objectReference: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
@@ -485,7 +485,8 @@ Prefab:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: c990f84f54ac1144baccbc110a5e1688, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1879484940

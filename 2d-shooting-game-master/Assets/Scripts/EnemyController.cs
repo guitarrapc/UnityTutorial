@@ -6,19 +6,22 @@ using System;
 namespace Assets.Scripts
 {
 
-    public class EnemyController : MonoBehaviour
+    public class EnemyController : SpaceShipControllerBase
     {
-        private SpaceShipController _spaceShipController;
+        public new float MoveSpeed;
+        public new bool CanShot;
+        public new float ShotInterval;
+
+        public new GameObject BulletObject;
+        public new GameObject ExplosionObject;
 
         IEnumerator Start()
         {
-            _spaceShipController = GetComponent<SpaceShipController>();
-
             // y軸 (up) のマイナス => 下に移動
             Move(transform.up * -1);
 
             // 弾を打たない属性の場合はここでコルーチンも終わり
-            if (!_spaceShipController.CanShot) yield break;
+            if (!CanShot) yield break;
 
             // 弾の発射
             while (true)
@@ -27,15 +30,15 @@ namespace Assets.Scripts
                 foreach (var shotPosition in Enumerable.Range(0, transform.childCount).Select(index => transform.GetChild(index)))
                 {
                     // 子要素のTranform と同じ位置、角度から発射
-                    _spaceShipController.Shot(shotPosition);
+                    base.Shot(shotPosition, BulletObject);
                 }
-                yield return new WaitForSeconds(_spaceShipController.ShotInterval);
+                yield return new WaitForSeconds(ShotInterval);
             }
         }
 
-        private void Move(Vector2 direction)
+        protected override void Move(Vector2 direction)
         {
-            GetComponent<Rigidbody2D>().velocity = direction * _spaceShipController.MoveSpeed;
+            GetComponent<Rigidbody2D>().velocity = direction * MoveSpeed;
         }
 
         void OnTriggerEnter2D(Collider2D collider)
@@ -49,7 +52,7 @@ namespace Assets.Scripts
                 Destroy(collider.gameObject);
 
                 // 爆発エフェクト
-                _spaceShipController.Explosion();
+                base.Explosion(ExplosionObject);
 
                 // 自分自身を削除
                 Destroy(gameObject);

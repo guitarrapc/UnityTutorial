@@ -56,7 +56,6 @@ GameObject:
   - 212: {fileID: 21227398}
   - 95: {fileID: 9596862}
   - 50: {fileID: 5015504}
-  - 114: {fileID: 11473842}
   - 114: {fileID: 11498750}
   - 60: {fileID: 6032044}
   m_Layer: 9
@@ -180,22 +179,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11473842
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39c467e2775da404d84d59c9fd6fd1c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 0.5
-  CanShot: 1
-  ShotInterval: 0.3
-  BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
-  ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
 --- !u!114 &11498750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,6 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890df1d17f860614b8f17a6fe83d6be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveSpeed: 2
+  CanShot: 1
+  ShotInterval: 3
+  BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}
+  ExplosionObject: {fileID: 106268, guid: 8ae99a5c463f96c4b8fe618354a39280, type: 2}
 --- !u!212 &21227398
 SpriteRenderer:
   m_ObjectHideFlags: 1

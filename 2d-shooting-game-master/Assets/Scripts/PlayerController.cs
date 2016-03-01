@@ -4,9 +4,14 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : SpaceShipControllerBase
     {
-        private SpaceShipController _spaceShipController;
+        public new float MoveSpeed;
+        public new bool CanShot;
+        public new float ShotInterval;
+
+        public new GameObject BulletObject;
+        public new GameObject ExplosionObject;
 
         void Awake()
         {
@@ -15,17 +20,16 @@ namespace Assets.Scripts
 
         IEnumerator Start()
         {
-            _spaceShipController = GetComponent<SpaceShipController>();
             while (true)
             {
                 // 弾を自機と同じ位置/角度で作成
-                _spaceShipController.Shot(transform);
+                Shot(transform, BulletObject);
 
                 // ショット音
                 GetComponent<AudioSource>().Play();
 
                 // ショット 待機時間
-                yield return new WaitForSeconds(_spaceShipController.ShotInterval);
+                yield return new WaitForSeconds(ShotInterval);
             }
         }
 
@@ -45,7 +49,7 @@ namespace Assets.Scripts
             Move(direction);
         }
 
-        private void Move(Vector2 direction)
+        protected override void Move(Vector2 direction)
         {
             // View Port の取得
             var min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
@@ -55,7 +59,7 @@ namespace Assets.Scripts
             Vector2 playerPosition = transform.position;
 
             // 移動量を position に追加
-            playerPosition += direction * _spaceShipController.MoveSpeed * Time.deltaTime;
+            playerPosition += direction * MoveSpeed * Time.deltaTime;
 
             // Player の位置を ViewPort 内に制限
             playerPosition.x = Mathf.Clamp(playerPosition.x, min.x, max.x);
@@ -76,7 +80,7 @@ namespace Assets.Scripts
                 Destroy(collider.gameObject);
 
                 // 爆発エフェクト
-                _spaceShipController.Explosion();
+                base.Explosion(ExplosionObject);
 
                 // 自分自身を削除
                 Destroy(gameObject);
