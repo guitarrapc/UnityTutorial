@@ -8,13 +8,6 @@ namespace Assets.Scripts
 
     public class EnemyController : SpaceShipControllerBase
     {
-        public new float MoveSpeed;
-        public new bool CanShot;
-        public new float ShotInterval;
-
-        public new GameObject BulletObject;
-        public new GameObject ExplosionObject;
-
         IEnumerator Start()
         {
             // y軸 (up) のマイナス => 下に移動

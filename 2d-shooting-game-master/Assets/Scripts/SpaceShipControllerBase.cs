@@ -6,12 +6,12 @@ namespace Assets.Scripts
     [RequireComponent(typeof(Rigidbody2D))]
     public abstract class SpaceShipControllerBase : MonoBehaviour
     {
-        protected float MoveSpeed;
-        protected bool CanShot;
-        protected float ShotInterval;
+        public float MoveSpeed;
+        public bool CanShot;
+        public float ShotInterval;
 
-        protected GameObject BulletObject;
-        protected GameObject ExplosionObject;
+        public GameObject BulletObject;
+        public GameObject ExplosionObject;
 
         public void Explosion(GameObject explosion)
         {

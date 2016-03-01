@@ -6,13 +6,6 @@ namespace Assets.Scripts
 {
     public class PlayerController : SpaceShipControllerBase
     {
-        public new float MoveSpeed;
-        public new bool CanShot;
-        public new float ShotInterval;
-
-        public new GameObject BulletObject;
-        public new GameObject ExplosionObject;
-
         void Awake()
         {
             Application.targetFrameRate = 60;
