@@ -15,6 +15,11 @@ namespace Assets.Scripts
             {
                 // 弾を自機と同じ位置/角度で作成
                 _spaceShipController.Shot(transform);
+
+                // ショット音
+                GetComponent<AudioSource>().Play();
+
+                // ショット 待機時間
                 yield return new WaitForSeconds(_spaceShipController.ShotInterval);
             }
         }

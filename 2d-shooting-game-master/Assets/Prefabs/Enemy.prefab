@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c467e2775da404d84d59c9fd6fd1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0.3
+  MoveSpeed: 0.5
   CanShot: 1
   ShotInterval: 0.3
   BulletObject: {fileID: 171998, guid: ef9a67ab60ba3b7459e63fd212dc930c, type: 2}

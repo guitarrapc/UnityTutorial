@@ -416,7 +416,7 @@ RigidBody | O (With Gravity) | X
         - [x] Get Layer ```LayerMask.LayerToName(collider.gameObject.layer);```
         - [x] If check for LayerName.... By String!?
         - [x] Destroy
-- [ ] BackGround
+- [x] BackGround
     - [Tutorial 6](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC06%E5%9B%9E-%E8%83%8C%E6%99%AF%E3%82%92%E4%BD%9C%E3%82%8B)
     - [x] Quad
         - [x] Create Empty GameObject 
@@ -426,13 +426,39 @@ RigidBody | O (With Gravity) | X
         - [x] Tune Z position for Visualize order.
             - larger amount will go back from smaller amount.
             - 0 will come front of 0.1
-    - [ ] Move Material
+    - [x] Move Material
         - Use SetTextureOffset to move matrieal.
         - [x] Confirm Material's Shader Texture Varialbe Name
             - Unity basic shader often use ```_MainTex```
             - You can confirm name with ```Select Matrial > Edit Shader > Compile and Show code``` ow Properties will show _MainTex or other.
         - [x] Change Texture Wrap Mode to ```Repeat```
-        
+        - [x] Change TextureOffSet to move material
+            - As Sprite don't have Offset, you need to use Material for controlling move by OffSet.
+            - Get OffSet from time can be like this ```var y = Mathf.Repeat(Time.time * ScrollSpeed, 1);``` then ```var offset = new Vector2(0, y);```
+            - Move material by SetTectureOffSet() like this ```GetComponent<Renderer>().sharedMaterial.SetTextureOffset("_MainTex", offset);```
+        - About ```_MainTex``` : http://momijisoft.seesaa.net/article/430396670.html
+        - Abount ```Graphoics.Blit``` : http://docs.unity3d.com/ja/current/ScriptReference/Graphics.Blit.html
+- [x] Wave
+    - [Tutorial 7](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC07%E5%9B%9E-Wave%E5%9E%8B%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF%E4%BD%9C%E3%82%8A)
+    - Wave, the pattern of how enemy show repeatedly.
+    - Make Enemy wave and create it's prefab from Script.
+    - [x] Create Wave Prefab
+        - [x] Create empty GameObject as ```EnemyWave```
+        - [x] Copy Enemy Instantiated GameObject and position
+        - [x] Assing Enemy GmaeObjects to ```EnemyWave```
+        - [x] Create EnemyWave Prefab
+    - [x] Instantiate Wave Prefab from Script
+- [x] BGM
+    - [Tutorial 8](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC08%E5%9B%9E-%E9%9F%B3%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B)
+    - BGM can sound by attaaching to Camera
+        - 3D Sound will consider distance of the Sounded object, means far item will be small volume.
+        - 2D  Sound will never consider distance of the Sounded object, means always same volume.
+    - Attach BGM to the Camera and enable ```Loop```
+- [x] SE
+    - [Tutorial 8](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC08%E5%9B%9E-%E9%9F%B3%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B)
+    - SE can be assign with ```Audio Source``` component.
+        - [x] Call Play from Script. ```GetComponent<AudioSource>().Play();```
+
          
 
 
