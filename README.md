@@ -470,7 +470,25 @@ RigidBody | O (With Gravity) | X
 - [x] Script Execution Order
     - [Tutorial 10](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC10%E5%9B%9E-%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%82%92%E4%BB%98%E3%81%91%E3%82%8B)
         - There are Script Execution Order to manage script running order.
-         
+- [x] Animator
+    - [Tutorial 10](https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC11%E5%9B%9E-%E3%82%A8%E3%83%8D%E3%83%9F%E3%83%BC%E3%81%AEHP%E3%80%81%E5%BC%BE%E3%81%AE%E6%94%BB%E6%92%83%E5%8A%9B%E3%80%81%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%BF%BD%E5%8A%A0)
+    - [x] Create New Animator Layer ```Project Browser -> Animator```
+        - Dummy
+        - Invincle
+    - [x] Make Transition for Animation Layer
+        - As name is Transition, it means how Animator move from/to.
+        - In this case, Invincle is required for 3 seconds right after game start.
+        - So the transition will be Invincle -> Dummy
+- [x] Animation
+    - [x] Create new Animation in the Project Browser. 
+    - [x] Open Animation with ```Window > Animation```
+    - [x] Change to Invincle
+    - [x] Add ```Box Collider 2D.Enabled```
+        - This means Collider Detection will be controllable with Animation.
+        - If enable Key is removed to certain seconds, Attached GameObject will not detect.
+    - [x] Add ```SpriteRenderer.Enabled```
+        - This means Sprite Rendering can be loop ON -> OFF.
+        - Like Blinking!
 
 
 Todo
