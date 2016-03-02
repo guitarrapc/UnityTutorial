@@ -494,16 +494,16 @@ RigidBody | O (With Gravity) | X
 Todo
 ====
 
-- [ ] Understand Unity GameObject LifeCycle
+- [x] Understand Unity GameObject LifeCycle
     - When Update() is call?
     - When FixedUpdate() is call?
     - http://docs.unity3d.com/ja/current/Manual/ExecutionOrder.html
-- [ ] How to determine method name for event
-- [ ] Understand Attribute for Script
-- [ ] How to change FPS from Default (30) to 60.
+- [x] How to determine method name for event
+    - See Scripting API for MonoBehaivior : http://docs.unity3d.com/ScriptReference/MonoBehaviour.html
+- [x] Understand Attribute for Script
+    - http://tsubakit1.hateblo.jp/entry/2015/01/03/203843
+- [x] How to change FPS from Default (30) to 60.
     - [x] Application.targetFrameRate = 60; in ```Awake(){}```
-    - [ ] Is it really effect?
-- [ ] Is there any way to detect Layer name, not by string?
 
 Disclaimer
 ==== 
